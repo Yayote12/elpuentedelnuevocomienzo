@@ -3,59 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Puente del Nuevo Comienzo A.C.</title>
-    <!-- Aquí conectamos el CSS -->
+    <title>El Puente Del Nuevo Comienzo A.C.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="logo">
-            <!-- Aquí irá tu logo con el puente y la hormiga Tzicatl -->
-            <h1>El Puente del Nuevo Comienzo</h1>
-        </div>
-        <nav>
-            <ul>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="img/Logo - Sin Fondo.png" alt="Logo El Puente Del Nuevo Comienzo" class="logo">
+            <button class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
                 <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#programas">Programas</a></li>
+                <li><a href="#trabajo">Nuestro Trabajo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Construyendo un Nuevo Comienzo</h1>
+            <p>Trabajando juntos por el bienestar de nuestras comunidades en situación de vulnerabilidad.</p>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Construyendo caminos de esperanza y dignidad</h2>
-            <p>Brindamos apoyo integral a personas de la tercera edad y acompañamiento en la recuperación de adicciones.</p>
-            <a href="#contacto" class="btn-primary">Únete a nuestra causa</a>
-        </section>
-
-        <section id="programas" class="programs">
-            <h2>Nuestros Programas</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <h3>Apoyo a la Tercera Edad</h3>
-                    <p>Espacios de cuidado, talleres y atención integral para mejorar la calidad de vida de nuestros adultos mayores.</p>
-                </div>
-                <div class="card">
-                    <h3>Recuperación y Reinserción</h3>
-                    <p>Acompañamiento profesional y humano para superar las adicciones y construir un nuevo proyecto de vida.</p>
-                </div>
+    <!-- Misión y Visión -->
+    <section id="nosotros" class="section">
+        <div class="container grids-2">
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h2>Nuestra Misión</h2>
+                <p>Contribuir al bienestar de las personas, familias y comunidades en situación de vulnerabilidad mediante acciones de asistencia social, educación, capacitación, inclusión y gestión de recursos con transparencia, responsabilidad y compromiso social.</p>
             </div>
-        </section>
-    </main>
+            <div class="card">
+                <div class="icon">👁️</div>
+                <h2>Nuestra Visión</h2>
+                <p>Ser una Asociación Civil reconocida por su liderazgo, profesionalismo y compromiso, consolidándose como una institución confiable que genera oportunidades, y mejora la calidad de vida de las personas mediante programa y alianzas.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer id="contacto">
-        <h2>Contáctanos</h2>
-        <form id="contactForm">
-            <input type="text" id="nombre" placeholder="Tu Nombre" required>
-            <input type="email" id="email" placeholder="Tu Correo" required>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-        <p>&copy; 2026 El Puente del Nuevo Comienzo A.C. Todos los derechos reservados.</p>
+    <!-- Nuestro Trabajo (Evidencias) -->
+    <section id="trabajo" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Nuestro Espacio de Trabajo</h2>
+            <p class="section-subtitle">Construyendo los cimientos en San Juan Tzicatlacoyan</p>
+            <div class="gallery grid-3">
+                <img src="img/Evidencia Infraestructura 1.jpg" alt="Infraestructura 1">
+                <img src="img/Evidencia Infraestructura 2.jpeg" alt="Infraestructura 2">
+                <img src="img/Evidencia Infraestructura 3.jpeg" alt="Infraestructura 3">
+            </div>
+
+            <h2 class="section-title mt-4">Trabajo en Campo</h2>
+            <p class="section-subtitle">Asistencia y evaluación nutricional comunitaria</p>
+            <div class="gallery grid-2">
+                <img src="img/Evidencia Nutricional 1.jpg" alt="Evaluación Nutricional 1">
+                <img src="img/Evidencia Nutricional 3.jpg" alt="Evaluación Nutricional 2">
+            </div>
+
+            <h2 class="section-title mt-4">Respeto por nuestro Entorno Natural</h2>
+            <p class="section-subtitle">Convivencia con la fauna local</p>
+            <div class="gallery grid-4">
+                <img src="img/Evidencia Fauna 1.jpeg" alt="Fauna 1">
+                <img src="img/Evidencia Fauna 2.jpeg" alt="Fauna 2">
+                <img src="img/Evidencia Fauna 3.jpg" alt="Fauna 3">
+                <img src="img/Evidencia Fauna 4.jpeg" alt="Fauna 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+        <div class="container grids-2">
+            <div>
+                <h2 class="section-title text-left">Escríbenos directamente</h2>
+                <p>Déjanos tus datos y un mensaje, nos pondremos en contacto contigo lo más pronto posible.</p>
+                <!-- Formulario Formspree -->
+                <form action="https://formspree.io/f/xzezkonr" method="POST" class="contact-form">
+                    <label>
+                        Tu correo electrónico:
+                        <input type="email" name="email" required placeholder="correo@ejemplo.com">
+                    </label>
+                    <label>
+                        Tu mensaje:
+                        <textarea name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </label>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><strong>Teléfono:</strong> <a href="tel:2223068351">222 306 8351</a></p>
+                <p><strong>Correo:</strong> <a href="mailto:elpuentedelnuevocomienzo@gmail.com">elpuentedelnuevocomienzo@gmail.com</a></p>
+                
+                <h3 class="mt-2">Ubicaciones</h3>
+                <p><strong>Dirección Fiscal:</strong><br>
+                C. 10-J 38 1, Bosques de San Sebastián, 72310<br>
+                Heroica Puebla de Zaragoza, Pue.</p>
+                
+                <p><strong>Terreno de Trabajo:</strong><br>
+                San Juan Tzicatlacoyan<br>
+                <a href="https://maps.app.goo.gl/ywUTQTVeu8oRS924A" target="_blank" class="map-link">📍 Ver ubicación en Google Maps</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p><strong>EL PUENTE DEL NUEVO COMIENZO A.C.</strong></p>
+            <p>https://elpuentedelnuevocomienzo.org.mx</p>
+            <div class="social-links mt-2">
+                <span><strong>FB:</strong> El Puente Del Nuevo Comienzo</span> |
+                <span><strong>IG:</strong> @elpuentedelnuevocomienzoac</span> |
+                <span><strong>YT:</strong> @ElPuenteDelNuevoComienzo</span> |
+                <span><strong>TT:</strong> @elpuentedelnuevocomienzo</span>
+            </div>
+        </div>
     </footer>
 
-    <!-- Aquí conectamos el JavaScript al final del body -->
     <script src="app.js"></script>
 </body>
 </html>
